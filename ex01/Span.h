@@ -23,10 +23,12 @@ private:
 public:
 	Span() = delete;
 	explicit Span(unsigned int size);
-	~Span();
+	~Span() = default;
 	Span(const Span& cp);
 	Span& operator=(const Span& cp);
 
+	size_t getSize() const;
+	std::vector<int>& getData();
 	void addNumber(int n);
 	unsigned int shortestSpan();
 	unsigned int longestSpan();

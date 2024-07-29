@@ -11,13 +11,10 @@
 /* ************************************************************************** */
 
 #include <stdexcept>
+#include <algorithm>
 #include "Span.h"
 
 Span::Span(unsigned int size) : m_size(size) {
-}
-
-Span::~Span() {
-
 }
 
 Span::Span(const Span &cp) {
@@ -40,9 +37,31 @@ void Span::addNumber(int n) {
 }
 
 unsigned int Span::shortestSpan() {
-	return 0;
+	std::sort(m_data.begin(), m_data.end());
+	size_t diff = m_data.back();
+	for (size_t it = 0; it < m_data.size(); it++){
+		if((m_data[it+1] - m_data[it]) < diff)
+			diff = (m_data[it+1] - m_data[it]);
+	}
+	return diff;
 }
 
 unsigned int Span::longestSpan() {
-	return 0;
+	std::sort(m_data.begin(), m_data.end());
+	size_t diff = 0;
+	for (size_t it = 0; it < m_data.size(); it++){
+		if((m_data[it+1] - m_data[it]) > diff)
+			diff = (m_data[it+1] - m_data[it]);
+	}
+	return diff;
 }
+
+size_t Span::getSize() const {
+	return m_size;
+}
+
+std::vector<int> &Span::getData() {
+	return m_data;
+}
+
+
