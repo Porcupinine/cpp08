@@ -13,3 +13,6 @@ add_executable(ex01
 		ex01/Span.h
 		ex01/main.cpp
 )
+
+add_executable(ex02
+)

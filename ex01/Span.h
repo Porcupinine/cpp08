@@ -30,6 +30,7 @@ public:
 	size_t getSize() const;
 	std::vector<int>& getData();
 	void addNumber(int n);
+	void addNumber(int limits);
 	unsigned int shortestSpan();
 	unsigned int longestSpan();
 };

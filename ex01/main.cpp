@@ -16,16 +16,14 @@
 
 int main () {
 	Span x = Span(9);
-	x.addNumber(8);
-	x.addNumber(2);
-	x.addNumber(5);
-	x.addNumber(10);
-	x.addNumber(99);
-	x.addNumber(76);
-	x.addNumber(12);
-	x.addNumber(4);
-//	x.addNumber(88);
-//	x.addNumber(82);
+	x.addNumber(-8);
+	x.addNumber(-22);
+	x.addNumber(-5);
+	x.addNumber(-10);
+	x.addNumber(-99);
+	x.addNumber(-76);
+	x.addNumber(-12);
+	x.addNumber(-4);
 
 	std::vector<int> vecCopy = x.getData();
 	std::sort(vecCopy.begin(), vecCopy.end());
