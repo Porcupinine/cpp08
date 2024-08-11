@@ -40,7 +40,7 @@ void Span::addNumber(int n) {
 
 unsigned int Span::shortestSpan() {
 	std::sort(m_data.begin(), m_data.end());
-	size_t diff = INT_MAX;
+	int diff = INT_MAX;
 	for (size_t it = 0; it < m_data.size() - 1; it++){
 		if((m_data[it+1] - m_data[it]) < diff)
 			diff = (m_data[it+1] - m_data[it]);
@@ -50,7 +50,7 @@ unsigned int Span::shortestSpan() {
 
 unsigned int Span::longestSpan() {
 	std::sort(m_data.begin(), m_data.end());
-	size_t diff = 0;
+	int diff = 0;
 	for (size_t it = 0; it < m_data.size() - 1; it++){
 		if((m_data[it+1] - m_data[it]) > diff) {
 			diff = (m_data[it + 1] - m_data[it]);
@@ -65,5 +65,3 @@ size_t Span::getSize() const {
 std::vector<int> &Span::getData() {
 	return m_data;
 }
-
-

@@ -17,12 +17,12 @@
 #include <iostream>
 
 template <typename T>
-int easyfind(T& con, int target) {
-	if (std::find(con.begin(), con.end(), target) != con.end()) {
-		return 0;
+typename T::iterator easyfind(T& con, int target) {
+	typename T::iterator it = std::find(con.begin(), con.end(), target);
+	if ( it != con.end()) {
+		return it;
 	}
-	std::cout<<target<<" can't be found!\n";
-	return 1;
+	throw std::invalid_argument("Target not found!\n");
 }
 
 #endif //CPP8_EASYFIND_H

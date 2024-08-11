@@ -30,10 +30,20 @@ public:
 	size_t getSize() const;
 	std::vector<int>& getData();
 	void addNumber(int n);
-	void addNumber(int limits);
+
+	template<class It>
+	void addNumber(It start, It end);
+
 	unsigned int shortestSpan();
 	unsigned int longestSpan();
 };
+
+template<class It>
+void Span::addNumber(It start, It end) {
+	for (; start != end; ++start) {
+		addNumber(*start);
+	}
+}
 
 
 #endif //CPP8_SPAN_H
