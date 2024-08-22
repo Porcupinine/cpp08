@@ -15,7 +15,6 @@ add_executable(ex01
 )
 
 add_executable(ex02
-		ex02/MutantStack.cpp
 		ex02/MutantStack.h
 		ex02/main.cpp
 )
