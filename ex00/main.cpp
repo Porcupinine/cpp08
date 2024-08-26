@@ -24,16 +24,22 @@ int main () {
 		vec.push_back(10);
 		vec.push_back(5);
 		vec.push_back(6);
-
+		for (auto value : vec){
+			std::cout<<value<<", ";
+		}
 		try{
-			easyfind(vec, 9);
+			int target = 9;
+			std::cout<<"\ntarget = "<<target<<"\n";
+			easyfind(vec, target);
 			std::cout <<"Target found!\n";
 		}
 		catch(const std::exception &ex){
 			std::cout<<ex.what();
 		}
 		try{
-			easyfind(vec, 99);
+			int target = 99;
+			std::cout<<"\ntarget = "<<target<<"\n";
+			easyfind(vec, target);
 			std::cout <<"Target found!\n";
 		}
 		catch(const std::exception &ex){
@@ -43,16 +49,22 @@ int main () {
 	{
 		std::cout<<"\n-----Array----\n";
 		std::array<int, 7> arr {0, 22 ,6 ,7 ,8, 9 ,6};
-
+		for (auto value : arr){
+			std::cout<<value<<", ";
+		}
 		try{
-			easyfind(arr, 9);
+			int target = 9;
+			std::cout<<"\ntarget = "<<target<<"\n";
+			easyfind(arr, target);
 			std::cout <<"Target found!\n";
 		}
 		catch(const std::exception &ex){
 			std::cout<<ex.what();
 		}
 		try{
-			easyfind(arr, 99);
+			int target = 99;
+			std::cout<<"\ntarget = "<<target<<"\n";
+			easyfind(arr, target);
 			std::cout <<"Target found!\n";
 		}
 		catch(const std::exception &ex){
@@ -66,16 +78,22 @@ int main () {
 		lis.push_back(86);
 		lis.push_back(9);
 		lis.push_back(55);
-
+		for (auto value : lis){
+			std::cout<<value<<", ";
+		}
 		try{
-			easyfind(lis, 9);
-			std::cout <<"Target found!\n";
+			int target = 9;
+			std::cout<<"\ntarget = "<<target<<"\n";
+			easyfind(lis, target);
+			std::cout <<target<< "Target found!\n";
 		}
 		catch(const std::exception &ex){
 			std::cout<<ex.what();
 		}
 		try{
-			easyfind(lis, 99);
+			int target = 99;
+			std::cout<<"\ntarget = "<<target<<"\n";
+			easyfind(lis, target);
 			std::cout <<"Target found!\n";
 		}
 		catch(const std::exception &ex){

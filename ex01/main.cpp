@@ -36,11 +36,14 @@ int main () {
 		std::cout << "smalestspam: " << x.shortestSpan() << "\n";
 	}
 	{
+		std::cout<<"\n-------Testing iterator-----------\n";
 		Span y(10);
-		std::array<int, 10> sample = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+		std::array<int, 10> sample = {101, 69, 88, 78, 64, 75, 43, 53, 24, 51};
 		y.addNumber(sample.begin(), sample.end());
 		for (size_t it = 0; it < y.getSize(); it++) {
 			std::cout << y.getData()[it] << "\n";
 		}
+		std::cout << "longestspam: " << y.longestSpan() << "\n";
+		std::cout << "smalestspam: " << y.shortestSpan() << "\n";
 	}
 }
